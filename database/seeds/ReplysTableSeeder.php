@@ -10,7 +10,7 @@ class ReplysTableSeeder extends Seeder
     public function run()
     {
     	$user_ids = User::all()->pluck('id')->toArray();
-    	$topic_ids = User::all()->pluck('id')->toArray();
+    	$topic_ids = Topic::all()->pluck('id')->toArray();
 
     	$faker = app(Faker\Generator::class);
 
