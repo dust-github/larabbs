@@ -17,7 +17,10 @@ class RepliesController extends Controller
 
 	public function store(ReplyRequest $request, Reply $reply)
     {
-        $reply->content = $request->content;
+        $reply->content = clean($reply->content, 'user_topic_body');
+        if (empty($reply->content)) {
+        	return redirect()->back()->with('danger', '非法操作！');
+        }
         $reply->user_id = Auth::id();
         $reply->topic_id = $request->topic_id;
         $reply->save();
