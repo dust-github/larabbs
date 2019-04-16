@@ -104,7 +104,7 @@ return array(
      *
      * @type string
      */
-    'home_page' => 'users',
+    'home_page' => 'topics',
 
     /*
      * The route to which the user will be taken when they click the "back to site" button
@@ -125,7 +125,7 @@ return array(
      *
      * @type string
      */
-    'logout_path' => false,
+    'login_path' => 'permission-denied',
 
     /*
      * This is the key of the return path that is sent with the redirection to your login_action. Session::get('redirect') will hold the return URL.
