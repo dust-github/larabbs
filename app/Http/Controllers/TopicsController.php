@@ -38,7 +38,7 @@ class TopicsController extends Controller
 		return view('topics.create_and_edit', compact('topic', 'categories'));
 	}
 
-	public function store(TopicRequest $request, Topic $topic)
+	public function p(TopicRequest $request, Topic $topic)
 	{
 		$topic->fill($request->all());
 		$topic->user_id = Auth::id();
